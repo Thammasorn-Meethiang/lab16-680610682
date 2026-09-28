@@ -6,12 +6,15 @@ export const students: Student[] = [
     firstName: "Matt",
     lastName: "Damon",
     program: "CPE",
+    status: "Active",
+    enrolledCourses: [],
   },
   {
     studentId: "650610002",
     firstName: "Cillian",
     lastName: "Murphy",
     program: "CPE",
+    status: "Active",
     courses: ["261207", "261497"],
   },
   {
@@ -19,36 +22,25 @@ export const students: Student[] = [
     firstName: "Emily",
     lastName: "Blunt",
     program: "ISNE",
+    status: "Active",
     courses: ["269101", "261497"],
   },
 ];
 
 export const courses: Course[] = [
   {
-    courseId: "261207",
+    courseCode: "261207",
     courseTitle: "Basic Computer Engineering Lab",
     instructors: ["Dome", "Chanadda"],
   },
   {
-    courseId: "261497",
+    courseCode: "261497",
     courseTitle: "Full Stack Development",
     instructors: ["Dome", "Nirand", "Chanadda"],
   },
   {
-    courseId: "269101",
+    courseCode: "269101",
     courseTitle: "Introduction to Information Systems and Network Engineering",
     instructors: ["KENNETH COSH"],
   },
 ];
-
-export const enrollments: Enrollment[] = [
-  { studentId: "650610002", courseId: "261207" },
-  { studentId: "650610002", courseId: "261497" },
-  { studentId: "650610003", courseId: "269101" },
-  { studentId: "650610003", courseId: "261497" },
-];
-
-export const CURRENT_STUDENT_ID = "650610002";
-export const currentStudent = students.find(
-  (s) => s.studentId === CURRENT_STUDENT_ID,
-)!;
